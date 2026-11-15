@@ -1,0 +1,67 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Semester;
+use Illuminate\Http\Request;
+
+class SemesterController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        return view('admin.semester.index');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        // return $request;
+         $Semester = Semester::newSemester($request);
+         return back()->with('message','Semester details Created Successfully');
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(Semester $semester)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(Semester $semester)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, Semester $semester)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(Semester $semester)
+    {
+        //
+    }
+}
